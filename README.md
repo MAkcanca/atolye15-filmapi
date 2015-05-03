@@ -8,7 +8,10 @@
 **Parametreler**
 
  - title
+ 
+ 
  *Film Başlığı ile arama*
+
  `/v1/search?title=Star%20Wars`
 
  - genre
