@@ -58,6 +58,8 @@
 
  ## Film Ekleme
  
+> Düzenleme için de aynı parametreler geçerli.
+> /v1/update/film
 
 **Parametreler**
 
@@ -99,8 +101,10 @@
 
 `v1/add/film?title=Film%20Adı&day=01&month=05&year=2001&imdb=5.0&director=Cem%20Yılmaz&desc=Lorem%20ipsum%20dior%20atolye15%20&genre=Horror`
 
-## Aktör Ekleme 
+## Aktör Ekleme & Düzenleme
 
+> Düzenleme için de aynı parametreler geçerli.
+> /v1/update/actor
 
 **Parametreler**
 
@@ -132,6 +136,8 @@
 
 ## Tür Ekleme 
 
+> Düzenleme için de aynı parametreler geçerli.
+> /v1/update/genre
 
 
 **Parametreler**
@@ -173,3 +179,5 @@
 **Örnek**
 
 `/v1/add/director?name=Çağan%20Irmak&born=04-04-1970&photo=caganirmak.jpg&gender=M&bio=Lorem%20ipsum%20dior%20çağan.`
+
+
