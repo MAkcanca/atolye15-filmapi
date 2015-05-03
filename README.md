@@ -2,6 +2,13 @@
 
 > Ufak tefek hatalar olabilir, issue açarsanız en kısa sürede fixlerim. 
 
+## API Key Oluşturma
+
+Sadece ekleme,silme ve update için geçerli olan API key'i
+
+`/v1/generate/key` adresinden alabilir, isteklerde `key` parametresi ile kullanabilirsiniz.
+
+
 ## Film Arama
 
 
