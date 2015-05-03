@@ -9,38 +9,51 @@
 
  - title
  
- 
- *Film Başlığı ile arama*
+*Film Başlığı ile arama*
 
- `/v1/search?title=Star%20Wars`
+`/v1/search?title=Star%20Wars`
 
  - genre
- *Film türüne göre arama.*
-  `/v1/search?genre=Horror`
+ 
+*Film türüne göre arama.*
+
+`/v1/search?genre=Horror`
 
  - year
+ 
 *Yayın yılına göre arama.*
- `/v1/search?year=2015`
+
+`/v1/search?year=2015`
 
  - imdb
- *IMDb puanına göre arama.*
-  `/v1/search?imdb=5.0`
+ 
+*IMDb puanına göre arama.*
+
+`/v1/search?imdb=5.0`
 
  - actor
+ 
 *Oyuncuya göre arama.*
- `/v1/search?actor=Cem%20Yılmaz`
+
+`/v1/search?actor=Cem%20Yılmaz`
 
  - director
- *Yönetmene göre arama.*
-  `/v1/search?director=Çağan%20Irmak`
+ 
+*Yönetmene göre arama.*
+
+`/v1/search?director=Çağan%20Irmak`
 
  - max
- *Maksimum sonuç sayısı. Boş girildiğinde 5 alır.*
-  `/v1/search?title=Star%20Wars&imdb=5.0&max=3&page=1`
+ 
+*Maksimum sonuç sayısı. Boş girildiğinde 5 alır.*
+
+`/v1/search?title=Star%20Wars&imdb=5.0&max=3&page=1`
 
  - page
+ 
 *Sayfalama.*
-  `/v1/search?title=Star%20Wars&imdb=5.0&max=3&page=1`
+
+`/v1/search?title=Star%20Wars&imdb=5.0&max=3&page=1`
 
 
  ## Film Ekleme ##
@@ -51,25 +64,40 @@
 > Sistemin sağlıklı bir biçimde çalışması için tüm alanların doldurulması gerekmektedir. Ama zorunlu da değildir. :p
 
  - title
- *String*
+
+*String*
+ 
  - day
- *Integer*
+ 
+*Integer*
+
  - month
- *Integer*
+ 
+*Integer*
+
  - year
- *Integer*
+ 
+*Integer*
+
  - desc
- *Text*
+ 
+*Text*
+
  - genre
- *String. (Veritabanında olması gerekiyor.)*
+ 
+*String. (Veritabanında olması gerekiyor.)*
+
  - director
- *String. (Veritabanında olması gerekiyor.)*
+ 
+*String. (Veritabanında olması gerekiyor.)*
+
  - imdb
- *Integer*
+ 
+*Integer*
 
 **Örnek**
 
-    v1/add/film?title=Film%20Adı&day=01&month=05&year=2001&imdb=5.0&director=Cem%20Yılmaz&desc=Lorem%20ipsum%20dior%20atolye15%20&genre=Horror
+`v1/add/film?title=Film%20Adı&day=01&month=05&year=2001&imdb=5.0&director=Cem%20Yılmaz&desc=Lorem%20ipsum%20dior%20atolye15%20&genre=Horror`
 
 ## Aktör Ekleme ##
 
@@ -79,15 +107,24 @@
 > Sistemin sağlıklı bir biçimde çalışması için tüm alanların doldurulması gerekmektedir. Ama zorunlu da değildir. :p
 
  - name
- *String*
+ 
+*String*
+
  - born
- *String (01-03-1997)*
+
+*String (01-03-1997)*
+ 
  - photo
- *String*
+ 
+*String*
+
  - gender
- *String ( M &F )*
+ 
+*String ( M &F )*
+
  - bio 
- *Text*
+ 
+*Text*
  
  **Örnek**
 
@@ -100,7 +137,8 @@
 **Parametreler**
 
  - genre
- *String*
+ 
+*String*
 
 **Örnek**
 
@@ -113,16 +151,25 @@
 **Parametreler**
 
  - name
- *String*
- - born
- *String (01-03-1997)*
- - photo
- *String*
- - gender
- *String ( M &F )*
- - bio 
- *Text*
  
- **Örnek**
-  
+*String*
+
+ - born
+
+*String (01-03-1997)*
+ 
+ - photo
+ 
+*String*
+
+ - gender
+ 
+*String ( M &F )*
+
+ - bio 
+ 
+*Text*
+ 
+**Örnek**
+
 `/v1/add/director?name=Çağan%20Irmak&born=04-04-1970&photo=caganirmak.jpg&gender=M&bio=Lorem%20ipsum%20dior%20çağan.`
