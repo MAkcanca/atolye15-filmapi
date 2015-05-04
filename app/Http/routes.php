@@ -16,11 +16,13 @@ Route::get('v1/add/director','AddController@addDirector');
 Route::get('v1/update/film','UpdateController@updateFilm');
 Route::get('v1/update/actor','UpdateController@updateActor');
 Route::get('v1/update/genre','UpdateController@updateGenre');
+Route::get('v1/update/director','UpdateController@updateDirector');
 
 /* Delete */
 Route::get('v1/delete/genre','DeleteController@deleteGenre');
 Route::get('v1/delete/film','DeleteController@deleteFilm');
 Route::get('v1/delete/actor','DeleteController@deleteActor');
+Route::get('v1/delete/director','DeleteController@deleteDirector');
 
 /* Other */
 Route::get('v1/generate/key','KeyController@generateKey');

@@ -63,7 +63,7 @@ Sadece ekleme,silme ve update için geçerli olan API key'i
 `/v1/search?title=Star%20Wars&imdb=5.0&max=3&page=1`
 
 
- ## Film Ekleme
+## Film Ekleme
  
 > Düzenleme için de aynı parametreler geçerli.
 > /v1/update/film
@@ -186,5 +186,31 @@ Sadece ekleme,silme ve update için geçerli olan API key'i
 **Örnek**
 
 `/v1/add/director?name=Çağan%20Irmak&born=04-04-1970&photo=caganirmak.jpg&gender=M&bio=Lorem%20ipsum%20dior%20çağan.`
+
+## Düzenleme işlemleri
+
+Düzenleme işlemleri için kullanacağımız url'ler
+
+- `/v1/update/film`
+- `/v1/update/actor`
+- `/v1/update/genre`
+- `/v1/update/director`
+
+Zorunlu olarak aldığı parametreler ise sadece  `id` ve `key`, sonrasında düzenlemek istediğiniz alanın parametresini girip düzenliyoruz. 
+
+**Örnek**
+
+`/v1/update/film?id=2&title=Film%20Adı&key=API_KEY`
+
+## Silme İşlemleri
+
+Silme işlemleri için kullanacağımız url'ler
+
+- `/v1/delete/film`
+- `/v1/delete/actor`
+- `/v1/delete/genre`
+- `/v1/delete/director`
+
+Aldığı parametreler ise sadece  `id` ve `key`
 
 

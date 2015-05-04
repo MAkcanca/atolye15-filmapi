@@ -24,26 +24,52 @@ class UpdateController extends Controller {
 
 		if ($keyControl == Input::get('key',false)) {
 
-			$film = Film::find(Input::get('id'));
-			$film->title = Input::get('title',false);
-			$film->releaseDay = Input::get('day',false);
-			$film->releaseMonth = Input::get('month',false);
-			$film->releaseYear = Input::get('year',false);
-			$film->description = Input::get('desc',false);
+			$film = Film::find(Input::get('id')); // zorunlu
 
-			if(Input::get('genre')) { 
+			$title = Input::get('title',false);
+			$day = Input::get('day',false);
+			$month = Input::get('month',false);
+			$year = Input::get('year',false);
+			$desc = Input::get('desc',false);
+			$genreGet = Input::get('genre',false);
+			$directorGet = Input::get('director',false);
+			$imdb = Input::get('imdb',false);
+
+			if ($title) {
+				$film->title = $title;
+			}
+			if ($day) {
+				$film->releaseDay = $day;
+
+			}
+			if ($month) {
+				$film->releaseMonth = $month;
+
+			}
+			if ($year) {
+				$film->releaseYear = $year;
+
+			}
+			if ($desc) {
+				$film->description = $desc;
+			}
+
+			if($genreGet) { 
 				$genre = Genre::where('genre',Input::get('genre'))->get();
 				$genreId = $genre[0]->id;
+				$film->genre = $genreId;
 			}
 
-			if(Input::get('director')) { 
+			if($directorGet) { 
 				$director = Director::where('name',Input::get('director'))->get();
 				$directorId = $director[0]->id;
+				$film->director = $directorId;
+
 			}
 
-			$film->genre = $genreId;
-			$film->imdb = Input::get('imdb',false);
-			$film->director = $directorId;
+			if($imdb) {
+				$film->imdb = $imdb;
+			}		
 
 			if($film->update()) {
 				return Response::json(['result' => 'success'],200);
@@ -59,19 +85,40 @@ class UpdateController extends Controller {
 
 		if ($keyControl == Input::get('key',false)) {
 
-			$actor = Actor::find(Input::get('id'));
-			$actor->name = Input::get('name',false);
-			$actor->born = Input::get('born',false);
-			$actor->photo = Input::get('photo',false);
-			$actor->gender = Input::get('gender',false);
-			$actor->bio = Input::get('bio',false);
+			$actor = Actor::find(Input::get('id')); // zorunlu
+			$name = Input::get('name',false);
+			$born = Input::get('born',false);
+			$photo = Input::get('photo',false);
+			$gender = Input::get('gender',false);
+			$bio = Input::get('bio',false);
+
+			if ($name) {
+				$actor->name = $name;
+			}
+			if ($born) {
+				$actor->born = $born;
+			}
+			if ($photo) {
+
+				$actor->photo = $photo;
+
+			}
+			if ($gender) {
+				$actor->gender = $gender;
+			} 
+
+			if ($bio) {
+				$actor->bio = $bio;
+			}
+
 
 			if($actor->update()) {
 				return Response::json(['result' => 'success','id' => $actor->id],200);
 			} else {
 				return Response::json(['result' => 'failed'],200);
 			}
-		}
+		}	
+
 
 	}
 
@@ -81,8 +128,8 @@ class UpdateController extends Controller {
 
 		if ($keyControl == Input::get('key',false)) {
 
+			$genre = Genre::find(Input::get('id')); //zorunlu
 
-			$genre = Genre::find(Input::get('id'));
 			$genre->genre = Input::get('genre',false);
 
 			if($genre->update()) {
@@ -101,11 +148,30 @@ class UpdateController extends Controller {
 		if ($keyControl == Input::get('key',false)) {
 
 			$Director = Director::find(Input::get('id'));
-			$Director->name = Input::get('name',false);
-			$Director->born = Input::get('born',false);
-			$Director->photo = Input::get('photo',false);
-			$Director->gender = Input::get('gender',false);
-			$Director->bio = Input::get('bio',false);
+			$name = Input::get('name',false);
+			$born = Input::get('born',false);
+			$photo = Input::get('photo',false);
+			$gender = Input::get('gender',false);
+			$bio = Input::get('bio',false);
+
+			if ($name) {
+				$Director->name = $name;
+			}
+			if ($born) {
+				$Director->born = $born;
+			}
+			if ($photo) {
+
+				$Director->photo = $photo;
+
+			}
+			if ($gender) {
+				$Director->gender = $gender;
+			} 
+
+			if ($bio) {
+				$Director->bio = $bio;
+			}
 
 			if($Director->update()) {
 				return Response::json(['result' => 'success','id' => $Director->id],200);
