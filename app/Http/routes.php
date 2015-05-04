@@ -1,7 +1,9 @@
 <?php
 
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function() {
+	return "docs <a href='https://github.com/rizasabuncu/atolye15-filmapi'>here</a>";
+});
 
 /* Search */
 Route::get('v1/search','GetController@search');
