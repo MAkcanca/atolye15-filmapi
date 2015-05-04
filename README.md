@@ -213,4 +213,13 @@ Silme işlemleri için kullanacağımız url'ler
 
 Aldığı parametreler ise sadece  `id` ve `key`
 
+## İhtiyaçlar
+
+- Şuanlık `key` parametresini girmediğimizde herhangi bir hata vermiyor. **ModelNotFoundException** handle edemedim :p
+
+## Teşekkürler
+
+Etkinlikte emeği geçen herkese çok teşekkürlerimi sunarım.
+
+© [Rıza Sabuncu](http://twitter.com/rizasabuncu) - 2015
 
